@@ -14,7 +14,7 @@ public class PercolationUF implements IPercolate {
 	IUnionFind myFinder;
 	
 	//Creates a PercolationUF object with a IUnionFinder
-	public PercolationUF(IUnionFind finder, int n) {
+	public PercolationUF(int n, IUnionFind finder) {
 		//Creates a grid of booleans and sets a VTOP and VBOTTOM, and fills the grid with false
 		myGrid = new boolean[n][n];
 		myOpenCount = 0;
