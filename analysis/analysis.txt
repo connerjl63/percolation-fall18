@@ -1,22 +1,63 @@
-Your name
-Your netid
+Conner Lewis
+cjl63
 
 Copy/Paste results from PercolationStats using PercolationDFS
-
+Took too long
 
 Copy/Paste results from PercolationStats using PercolationDFSFast
+simulation data for 20 trials
+grid	mean	stddev	time
+100	0.593	0.014	0.214
+200	0.591	0.010	0.164
+400	0.590	0.006	0.925
+800	0.594	0.004	6.232
+Exception in thread "main" java.lang.StackOverflowError
+	at PercolationDFS.dfs(PercolationDFS.java:109)
+	at PercolationDFS.dfs(PercolationDFS.java:109)
+	at PercolationDFS.dfs(PercolationDFS.java:110)
+	at PercolationDFS.dfs(PercolationDFS.java:109)
+	at PercolationDFS.dfs(PercolationDFS.java:109)
+	at PercolationDFS.dfs(PercolationDFS.java:109)
+	at PercolationDFS.dfs(PercolationDFS.java:111)
+
 
 
 Copy/Paste results from PercolationStats using PercolationBFS
-
+simulation data for 20 trials
+grid	mean	stddev	time
+100	0.593	0.014	0.223
+200	0.591	0.010	0.248
+400	0.590	0.006	1.281
+800	0.594	0.004	9.631
+1600	0.592	0.002	36.587
+3200	0.593	0.001	181.983
 
 Copy/Paste results from PercolationStats using PercolationUF 
 with the QuickUWPC UnionFind implementation.
+simulation data for 20 trials
+grid	mean	stddev	time
+100	0.593	0.014	0.141
+200	0.591	0.010	0.214
+400	0.590	0.006	0.842
+800	0.594	0.004	5.160
+1600	0.592	0.002	22.392
+3200	0.593	0.001	105.668
+
+simulation data for 40 trials
+grid	mean	stddev	time
+100	0.594	0.015	0.198
+200	0.591	0.009	0.258
+400	0.591	0.005	1.731
+800	0.593	0.004	9.559
+1600	0.593	0.002	44.020
+3200	0.593	0.001	214.692
 
 1. How does doubling the grid size affect running time (keeping # trials fixed)
-
+	Doubling the grid size increases by n log n
 
 2. How does doubling the number of trials affect running time.
-
+	Doubling the number of trials doubles the running time as n
 
 3. Estimate the largest grid size you can run in 24 hours with 20 trials. Explain your reasoning.
+	I estimate the largest grid size I could run would be 9440. This is because there are 86400 seconds
+	in a day, and n log n when n = 9440 equals roughly 86400.
